@@ -47,29 +47,7 @@ Future<T> showPatreonDialog<T>(BuildContext context) {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  FlatButton(
-                    onPressed: () => Navigator.pop(context, false),
-                    child: Text(
-                      context.translate('about.patreon.dismiss'),
-                      style: Theme.of(context).textTheme.bodyText2.copyWith(
-                            color: Theme.of(context).textTheme.caption.color,
-                          ),
-                    ),
-                  ),
-                  OutlineButton(
-                    highlightedBorderColor: Theme.of(context).accentColor,
-                    borderSide: BorderSide(
-                      color: Theme.of(context).textTheme.headline6.color,
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context, true);
-                      context.openUrl(Url.authorPatreon);
-                    },
-                    child: Text(
-                      'PATREON',
-                      style: Theme.of(context).textTheme.bodyText2,
-                    ),
-                  ),
+
                 ],
               ),
             )

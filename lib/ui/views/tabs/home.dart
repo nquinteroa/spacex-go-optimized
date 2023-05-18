@@ -1,4 +1,4 @@
-import 'package:add_2_calendar/add_2_calendar.dart';
+
 import 'package:cherry_components/cherry_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -165,17 +165,7 @@ class _HomeView extends StatelessWidget {
               ),
         onTap: !launch.tentativeTime
             ? () async {
-                await Add2Calendar.addEvent2Cal(Event(
-                  title: launch.name,
-                  description: launch.details ??
-                      context.translate('spacex.launch.page.no_description'),
-                  location: launch.launchpad.name ??
-                      context.translate('spacex.other.unknown'),
-                  startDate: launch.localLaunchDate,
-                  endDate: launch.localLaunchDate.add(
-                    Duration(minutes: 30),
-                  ),
-                ));
+
               }
             : null,
       ),

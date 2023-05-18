@@ -1,4 +1,4 @@
-import 'package:big_tip/big_tip.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_request_bloc/flutter_request_bloc.dart';
 import 'package:search_page/search_page.dart';
@@ -63,44 +63,7 @@ class LaunchesTab extends StatelessWidget {
               searchLabel: context.translate(
                 'spacex.other.tooltip.search',
               ),
-              suggestion: BigTip(
-                title: Text(
-                  context.translate(
-                    type == LaunchType.upcoming
-                        ? 'spacex.upcoming.title'
-                        : 'spacex.latest.title',
-                  ),
-                  style: Theme.of(context).textTheme.headline6.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-                subtitle: Text(
-                  context.translate('spacex.search.suggestion.launch'),
-                  style: Theme.of(context).textTheme.subtitle1.copyWith(
-                        color: Theme.of(context).textTheme.caption.color,
-                      ),
-                ),
-                child: Icon(Icons.search),
-              ),
-              failure: BigTip(
-                title: Text(
-                  context.translate(
-                    type == LaunchType.upcoming
-                        ? 'spacex.upcoming.title'
-                        : 'spacex.latest.title',
-                  ),
-                  style: Theme.of(context).textTheme.headline6.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-                subtitle: Text(
-                  context.translate('spacex.search.failure'),
-                  style: Theme.of(context).textTheme.subtitle1.copyWith(
-                        color: Theme.of(context).textTheme.caption.color,
-                      ),
-                ),
-                child: Icon(Icons.sentiment_dissatisfied),
-              ),
+
               filter: (launch) => [
                 launch.rocket.name,
                 launch.name,

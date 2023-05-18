@@ -1,4 +1,4 @@
-import 'package:add_2_calendar/add_2_calendar.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cherry_components/cherry_components.dart';
 import 'package:expand_widget/expand_widget.dart';
@@ -51,19 +51,7 @@ class LaunchPage extends StatelessWidget {
                           'spacex.other.tooltip.add_event',
                         ),
                         onPressed: () async {
-                          await Add2Calendar.addEvent2Cal(Event(
-                            title: _launch.name,
-                            description: _launch.details ??
-                                context.translate(
-                                  'spacex.launch.page.no_description',
-                                ),
-                            location: _launch.launchpad.name ??
-                                context.translate('spacex.other.unknown'),
-                            startDate: _launch.localLaunchDate,
-                            endDate: _launch.localLaunchDate.add(
-                              Duration(minutes: 30),
-                            ),
-                          ));
+
                         },
                         child: Icon(Icons.event),
                       ),

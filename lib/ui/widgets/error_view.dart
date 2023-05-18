@@ -1,4 +1,4 @@
-import 'package:big_tip/big_tip.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_request_bloc/flutter_request_bloc.dart';
@@ -12,20 +12,8 @@ class ErrorView<C extends RequestCubit> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BigTip(
-      subtitle: Text(
-        context.translate('spacex.other.loading_error.message'),
-        style: Theme.of(context).textTheme.subtitle1,
-      ),
-      action: Text(
-        context.translate('spacex.other.loading_error.reload'),
-        style: Theme.of(context).textTheme.subtitle1.copyWith(
-              color: Theme.of(context).accentColor,
-              fontWeight: FontWeight.bold,
-            ),
-      ),
-      actionCallback: () => context.read<C>().loadData(),
-      child: Icon(Icons.cloud_off),
+    return Scaffold(
+
     );
   }
 }
